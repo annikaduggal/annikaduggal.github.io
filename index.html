@@ -335,14 +335,28 @@
             margin-bottom: 0.75rem;
         }
 
-        .transcript-note {
-            margin-top: 2rem;
-            padding: 1.25rem 1.5rem;
-            border: 1px dashed var(--border);
-            border-radius: 10px;
-            font-size: 0.875rem;
-            color: var(--muted);
-            font-style: italic;
+        /* ── CONTACT ── */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .contact-item svg {
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
         }
 
         /* ── FOOTER ── */
@@ -385,6 +399,8 @@
         <li><a href="#skills">Resume</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+
     </ul>
 </nav>
 
@@ -392,29 +408,30 @@
 <section id="profile">
     <div class="fade-in">
         <div class="section-label">Profile</div>
-        <h1>Annika Duggal<br></h1>
-        <h2> <em>— Software Developer.</em> </h2>
-        <p class="hero-tagline">Computer Programming Student · George Brown College · Toronto, ON</p>
+        <h1>Annika Duggal</h1> <br>
+        <h2><em>Aspiring Software Engineer</em></h2>
+        <p class="hero-tagline">Computer Programming Student · George Brown Polytechnic · Toronto, ON</p>
         <p>
-            I'm currently completing a Computer Programming at George Brown College with a passion for building
-            well-structured, purposeful software. My coursework spans agile software development,
-            object-oriented programming, web technologies, and database design — and I'm always
-            looking for new challenges that push my skills further.
+            I'm a software developer candidate completing a Computer Programming Diploma at George Brown
+            Polytechnic, with hands-on experience in Java, Python, C#, JavaScript, SQL, and ASP.NET.
+            Before pivoting to tech, I spent two years at a fintech startup, embedded
+            within engineering and product teams and contributing to sprint planning, product testing and defect tracking.
         </p>
         <p>
-            I thrive in fast-paced, collaborative environments and bring a detail-oriented mindset.
-            I care deeply about writing code that's clean, maintainable and rigorously tested and place quality at the forefront of everything I build.
+            That experience gave me a practical understanding of the full development cycle long before
+            I wrote my first line of code. I build reliable, well-tested software and bring an
+            analytical mindset to every technical problem I work on. I am passionate about building systems that are
+            reliable, scalable and rigorously tested. Feel free to get in touch, as I am open to collaborating on a wide variety of projects.
         </p>
         <div class="hero-tags">
             <span class="tag">Java</span>
             <span class="tag">Python</span>
-            <span class="tag">HTML / CSS</span>
+            <span class="tag">C#</span>
+            <span class="tag">ASP.NET</span>
             <span class="tag">JavaScript</span>
             <span class="tag">SQL</span>
-            <span class="tag">Software Quality Assurance</span>
             <span class="tag">Git</span>
             <span class="tag">Agile / Scrum</span>
-            <span class="tag">ASP.Net</span>
         </div>
     </div>
     <img src="AD.jpg" alt="Annika Duggal" class="avatar-placeholder fade-in" style="transition-delay:0.15s; object-fit:cover; font-size:0;"></section>
@@ -423,14 +440,15 @@
 <section id="skills">
     <div class="section-label fade-in">Skills &amp; Resume</div>
 
-    <div class="resume-block fade-in">
-        <div class="resume-header">
-            <h3>Computer Programming</h3>
-            <span class="resume-date">2024 – Present</span>
+    <div class="resume-block fade-in" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <div>
+            <h3 style="margin-bottom:0.25rem;">Annika Duggal — Resume</h3>
+            <p style="margin:0; font-size:0.875rem; color:var(--muted);">Full CV including experience, education, and technical skills</p>
         </div>
-        <div class="resume-sub">George Brown College — Toronto, ON</div>
-        <p style="font-size:0.925rem;">Relevant coursework includes Agile Software Development, Object-Oriented Programming,
-            Web Development, Database Design, and Systems Analysis &amp; Design.</p>
+        <a href="AnnikaDuggal.pdf" download class="github-link" style="margin-top:0; white-space:nowrap;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+        </a>
     </div>
 
     <div class="resume-block fade-in">
@@ -438,29 +456,50 @@
             <h3>Technical Skills</h3>
         </div>
         <div class="skills-grid">
-            <div class="skill-pill"><span class="skill-dot"></span>Java (OOP)</div>
             <div class="skill-pill"><span class="skill-dot"></span>Python</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Java</div>
+            <div class="skill-pill"><span class="skill-dot"></span>C#</div>
+            <div class="skill-pill"><span class="skill-dot"></span>ASP.Net &amp; EF Core</div>
             <div class="skill-pill"><span class="skill-dot"></span>JavaScript</div>
             <div class="skill-pill"><span class="skill-dot"></span>HTML &amp; CSS</div>
-            <div class="skill-pill"><span class="skill-dot"></span>SQL / MySQL</div>
+            <div class="skill-pill"><span class="skill-dot"></span>SQL</div>
+            <div class="skill-pill"><span class="skill-dot"></span>PHP</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Bash</div>
+            <div class="skill-pill"><span class="skill-dot"></span>PostgreSQL / MySQL/ SQLite</div>
             <div class="skill-pill"><span class="skill-dot"></span>Git &amp; GitHub</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Jira</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Linux OS</div>
             <div class="skill-pill"><span class="skill-dot"></span>Agile / Scrum</div>
-            <div class="skill-pill"><span class="skill-dot"></span>UML Diagrams</div>
-            <div class="skill-pill"><span class="skill-dot"></span>Linux / Bash</div>
-            <div class="skill-pill"><span class="skill-dot"></span>REST APIs</div>
         </div>
+    </div>
+    <h2>Work Experience</h2>
+    <div class="resume-block fade-in">
+        <div class="resume-header">
+            <h3>Customer Success Team Lead</h3>
+            <span class="resume-date">Jan 2022 – Oct 2023</span>
+        </div>
+        <div class="resume-sub">Caary Capital — Toronto, ON</div>
+        <ul class="resume-list">
+            <li>Collaborated daily with developer and product teams on backlog grooming, sprint planning, and release prioritization</li>
+            <li>Participated in UAT to validate system functionality, identify defects, and deliver structured feedback to engineering prior to production releases</li>
+            <li>Analyzed application data and user behaviour to surface defects, usability issues, and performance inefficiencies, feeding findings directly into development workflows</li>
+            <li>Translated business and customer requirements into actionable technical specifications and testing scenarios for engineering teams</li>
+            <li>Configured automated communication workflows using SendGrid API integrations across SMS, email, and in-product messaging channels</li>
+            <li>Built and maintained internal documentation systems using WordPress and SharePoint to support engineering and operations teams</li>
+            <li>Managed multiple concurrent workstreams end-to-end, coordinating across product, engineering, and business stakeholders under overlapping deadlines</li>
+        </ul>
     </div>
 
     <div class="resume-block fade-in">
         <div class="resume-header">
-            <h3><!-- Job Title --></h3>
-            <span class="resume-date">Month YYYY – Month YYYY</span>
+            <h3>Customer Success Manager</h3>
+            <span class="resume-date">Aug 2021 – Dec 2021</span>
         </div>
-        <div class="resume-sub">Company Name — City, ON</div>
+        <div class="resume-sub">Caary Capital — Toronto, ON</div>
         <ul class="resume-list">
-            <li>Describe a key responsibility or achievement here.</li>
-            <li>Use action verbs: Built, Designed, Improved, Collaborated, Automated…</li>
-            <li>Add metrics where possible (e.g., reduced load time by 30%).</li>
+            <li>First Customer Success hire — established foundational operational systems and workflows from the ground up alongside engineering and product teams</li>
+            <li>Developed and maintained a product defect and issue log, advocating for critical bug fixes during sprint prioritization sessions</li>
+            <li>Designed and implemented a structured 90-day client onboarding framework, automating touchpoints across 150 key accounts</li>
         </ul>
     </div>
 
@@ -472,22 +511,34 @@
     <h2 class="fade-in">Projects &amp; Code</h2>
 
     <div class="project-grid">
-        <a class="project-card fade-in" href="#" target="_blank">
-            <div class="project-icon">♻️</div>
-            <h3>Waste Collection System</h3>
-            <p>An Agile-managed software system for ABC Recycling Management Inc., built with Group 29 for COMP2151. Includes user stories, personas, and team charter deliverables.</p>
+        <a class="project-card fade-in" href="https://github.com/annikaduggal/COMP2139-F2025" target="_blank">
+            <div class="project-icon">🗂️</div>
+            <h3>Project Management Web App</h3>
+            <p>Full-stack web application built with ASP.NET and EF Core. Features role-based access control (RBAC) and a PostgreSQL database.</p>
         </a>
 
-        <a class="project-card fade-in" href="#" target="_blank" style="transition-delay:0.1s">
-            <div class="project-icon">🗄️</div>
-            <h3>Database Project</h3>
-            <p><!-- Replace with your actual project description. Highlight the technologies used and what problem it solved. --></p>
+        <a class="project-card fade-in" href="https://github.com/annikaduggal/COMP2152_Assignment-2" target="_blank" style="transition-delay:0.08s">
+            <div class="project-icon">🔍</div>
+            <h3>Port Scanner</h3>
+            <p>Network port scanner built in Python. See the README for the full feature breakdown including scan modes and output options.</p>
         </a>
 
-        <a class="project-card fade-in" href="#" target="_blank" style="transition-delay:0.2s">
-            <div class="project-icon">🌐</div>
-            <h3>Web Development Project</h3>
-            <p><!-- Replace with your actual project description. Mention HTML, CSS, JavaScript, or any frameworks used. --></p>
+        <a class="project-card fade-in" href="https://github.com/dreamshrine/COMP2080_Assignment" target="_blank" style="transition-delay:0.16s">
+            <div class="project-icon">♟️</div>
+            <h3>Tic-Tac-Toe Console App</h3>
+            <p>Collaborative Java console Tic-Tac-Toe game with two-player mode and a single-player mode against a computer opponent powered by a custom algorithm.</p>
+        </a>
+
+        <a class="project-card fade-in" href="https://github.com/JGrace99/Fantasy-Fitness" target="_blank" style="transition-delay:0.24s">
+            <div class="project-icon">🏋️</div>
+            <h3>Fantasy Fitness Tracker</h3>
+            <p>Collaborative gamified competitive fitness tracker built with ASP.NET. Includes RBAC and a PostgreSQL database.</p>
+        </a>
+
+        <a class="project-card fade-in" href="https://github.com/Alfredd1/COMP2130_A2_G29" target="_blank" style="transition-delay:0.32s">
+            <div class="project-icon">💼</div>
+            <h3>Payroll Software</h3>
+            <p>Collaborative mock payroll application with a JavaFX GUI. Uses JSON and XML for data storage and processing.</p>
         </a>
     </div>
 
@@ -508,13 +559,9 @@
             <h3>Computer Programming</h3>
             <span class="resume-date">2024 – 2026 (Expected)</span>
         </div>
-        <div class="resume-sub">George Brown College — School of Computer Technology</div>
-        <ul class="resume-list">
-            <li>COMP2151 – Agile Software Development</li>
-            <li>COMP2152 – <!-- Course name --></li>
-            <li>COMP2148 – Professional Presence Online</li>
-            <li><!-- Add additional courses as relevant --></li>
-        </ul>
+        <div class="resume-sub">George Brown Polytechnic — Toronto, ON</div>
+        <p>Hands-on curriculum focused on object-oriented programming, web app development,
+            QA & testing, database architecture & management, programming logic and data structure &amp; algorithms</p>
     </div>
 
     <div class="edu-card fade-in">
@@ -533,39 +580,83 @@
     <div class="edu-card fade-in">
         <div class="badge">CERTIFICATES &amp; AWARDS</div>
         <ul class="resume-list">
-            <li>Summa Cum Laude — McMaster University</li>
-            <li>Dean's List — McMaster University (4 consecutive years)</li>
-            <li><!-- Add any other certificates or awards here --></li>
+            <li>Dean's List Award — George Brown Polytechnic (3x recipient - 2024, 2025, 2025)</li>
+            <li>Graduated Summa Cum Laude — McMaster University (2021)</li>
+            <li>Dean's List Award — McMaster University (4x recipient - 2018, 2019, 2020, 2021)</li>
         </ul>
     </div>
 
     <div class="edu-card fade-in">
         <div class="badge">TRANSCRIPTS</div>
-        <p style="font-size:0.925rem;">
-            Official and unofficial academic transcripts are available upon request, or can be
-            uploaded here as a PDF attachment / embedded document.
-        </p>
-        <!-- To embed a transcript, replace this paragraph with:
-             <embed src="transcript.pdf" width="100%" height="400px" type="application/pdf" /> -->
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+            <div>
+                <p style="margin:0; font-size:0.925rem;">Unofficial academic transcript from George Brown Polytechnic available for download below.</p>
+            </div>
+            <a href="transcript.pdf" download class="github-link" style="margin-top:0; white-space:nowrap; font-size:0.8rem; padding:0.6rem 1.1rem;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Transcript
+            </a>
+        </div>
     </div>
 
     <div class="edu-card fade-in">
         <div class="badge">LETTERS OF RECOMMENDATION</div>
         <p style="font-size:0.925rem;">
-            <!-- If you have letters of recommendation, upload them as PDFs and link them here.
-                 Example: <a href="recommendation-letter.pdf" target="_blank">View Letter – Professor Name</a> -->
             Letters of recommendation are available upon request.
         </p>
     </div>
+</section>
+<section id="contact">
+    <div class="section-label fade-in">Contact</div>
+    <h2 class="fade-in">Get in Touch</h2>
 
-    <div class="transcript-note fade-in">
-        💡 <strong>Note:</strong> This section can be updated to include scanned copies, embedded PDFs, or direct links to any official documentation.
+    <div class="resume-block fade-in" style="display:flex; flex-direction:column; gap:1rem;">
+
+        <!-- Email -->
+        <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4z"/>
+                <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:annika@rogers.com">annika@rogers.com</a>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                19.86 19.86 0 0 1-8.63-3.07
+                19.5 19.5 0 0 1-6-6
+                19.86 19.86 0 0 1-3.07-8.67A2
+                2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72
+                12.84 12.84 0 0 0 .7 2.81
+                2 2 0 0 1-.45 2.11L8.09 9.91
+                a16 16 0 0 0 6 6l1.27-1.27
+                a2 2 0 0 1 2.11-.45
+                12.84 12.84 0 0 0 2.81.7
+                A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>(647) 782-3997</span>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5
+                1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5
+                0h4.7v2.2h.1c.7-1.2 2.4-2.5 5-2.5 5.4 0
+                6.4 3.5 6.4 8.1V24h-5v-7.7c0-1.8 0-4.2-2.6-4.2
+                -2.6 0-3 2-3 4.1V24h-5V8z"/>
+            </svg>
+            <a href="https://www.linkedin.com/in/annikaduggal" target="_blank">
+                LinkedIn Profile
+            </a>
+        </div>
+
     </div>
 </section>
-
 <footer>
-    <p>© 2026 Annika Duggal · Computer Programming · George Brown College</p>
-    <p style="margin-top:0.4rem;">Built for COMP2148 – Professional Presence Online</p>
+    <p>© 2026 Built and designed by Annika Duggal</p>
 </footer>
 
 <script>
@@ -595,6 +686,8 @@
             link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
         });
     });
+    <!-- ── 5. CONTACT ── -->
+
 </script>
 </body>
 </html>
