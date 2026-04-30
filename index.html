@@ -259,6 +259,27 @@
         /* ── WORK SAMPLES ── */
         #work { border-bottom: 1px solid var(--border); }
 
+        .filter-btn {
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .filter-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -510,32 +531,39 @@
     <div class="section-label fade-in">Work Samples</div>
     <h2 class="fade-in">Projects &amp; Code</h2>
 
+    <div class="filter-bar fade-in" style="margin: 1.5rem 0; display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="asp">ASP.NET</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+    </div>
+
     <div class="project-grid">
-        <a class="project-card fade-in" href="https://github.com/annikaduggal/COMP2139-F2025" target="_blank">
+        <a class="project-card fade-in" data-category="asp" href="https://github.com/annikaduggal/COMP2139-F2025" target="_blank">
             <div class="project-icon">🗂️</div>
             <h3>Project Management Web App</h3>
             <p>Full-stack web application built with ASP.NET and EF Core. Features role-based access control (RBAC) and a PostgreSQL database.</p>
         </a>
 
-        <a class="project-card fade-in" href="https://github.com/annikaduggal/COMP2152_Assignment-2" target="_blank" style="transition-delay:0.08s">
+        <a class="project-card fade-in" data-category="python" href="https://github.com/annikaduggal/COMP2152_Assignment-2" target="_blank" style="transition-delay:0.08s">
             <div class="project-icon">🔍</div>
             <h3>Port Scanner</h3>
             <p>Network port scanner built in Python. See the README for the full feature breakdown including scan modes and output options.</p>
         </a>
 
-        <a class="project-card fade-in" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.16s">
+        <a class="project-card fade-in" data-category="java" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.16s">
             <div class="project-icon">♟️</div>
             <h3>Tic-Tac-Toe Console App</h3>
             <p>Collaborative Java console Tic-Tac-Toe game with two-player mode and a single-player mode against a computer opponent powered by a custom algorithm.</p>
         </a>
 
-        <a class="project-card fade-in" href="https://github.com/annikaduggal/Fantasy-Fitness" target="_blank" style="transition-delay:0.24s">
+        <a class="project-card fade-in" data-category="asp" href="https://github.com/annikaduggal/Fantasy-Fitness" target="_blank" style="transition-delay:0.24s">
             <div class="project-icon">🏋️</div>
             <h3>Fantasy Fitness Tracker</h3>
             <p>Collaborative gamified competitive fitness tracker built with ASP.NET. Includes RBAC and a PostgreSQL database.</p>
         </a>
 
-        <a class="project-card fade-in" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.32s">
+        <a class="project-card fade-in" data-category="java" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.32s">
             <div class="project-icon">💼</div>
             <h3>Payroll Software</h3>
             <p>Collaborative mock payroll application with a JavaFX GUI. Uses JSON and XML for data storage and processing.</p>
@@ -680,7 +708,31 @@
             link.style.color = link.getAttribute('href') === `#${current}` ? 'var(--accent)' : '';
         });
     });
-    <!-- ── 5. CONTACT ── -->
+
+    // Project filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+
+            // update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // filter projects
+            projects.forEach(project => {
+                const category = project.getAttribute('data-category');
+
+                if (filter === 'all' || category === filter) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
 
 </script>
 </body>
