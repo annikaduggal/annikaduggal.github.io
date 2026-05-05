@@ -18,6 +18,7 @@
             --accent-light: #ddeae1;
             --serif: 'DM Serif Display', Georgia, serif;
             --sans: 'DM Sans', sans-serif;
+            --shadow: 0 10px 30px rgba(0,0,0,0.06);
         }
 
         html { scroll-behavior: smooth; }
@@ -301,8 +302,7 @@
         .project-card:hover {
             border-color: var(--accent);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(45,90,61,0.08);
-        }
+            box-shadow: var(--shadow);        }
 
         .project-icon {
             font-size: 1.5rem;
@@ -536,19 +536,37 @@
         <button class="filter-btn" data-filter="asp">ASP.NET</button>
         <button class="filter-btn" data-filter="java">Java</button>
         <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="react">React</button>
     </div>
 
+    <p style="margin-top: 1.5rem; color: var(--muted); font-size: 0.9rem;">
+        Currently building full-stack applications focused on real-world workflows, data persistence, and scalable frontend architecture.
+    </p>
+
     <div class="project-grid">
+
+        <a class="project-card fade-in" data-category="react" href="https://react-job-tracker.vercel.app/" target="_blank">
+            <div class="project-icon">📊</div>
+            <h3>Job Tracker Dashboard (React)</h3>
+            <p>
+                A full React-based job application tracker with CRUD functionality, filtering by application status and persistent local storage. Built to simulate real-world personal CRM workflows.
+            </p>
+        </a>
+
         <a class="project-card fade-in" data-category="asp" href="https://github.com/annikaduggal/COMP2139-F2025" target="_blank">
             <div class="project-icon">🗂️</div>
             <h3>Project Management Web App</h3>
-            <p>Full-stack web application built with ASP.NET and EF Core. Features role-based access control (RBAC) and a PostgreSQL database.</p>
+            <p>
+                Full-stack project management system with role-based access control, designed to simulate real-world team workflows. Built with ASP.NET Core and PostgreSQL.
+            </p>
         </a>
 
         <a class="project-card fade-in" data-category="python" href="https://github.com/annikaduggal/COMP2152_Assignment-2" target="_blank" style="transition-delay:0.08s">
             <div class="project-icon">🔍</div>
             <h3>Port Scanner</h3>
-            <p>Network port scanner built in Python. See the README for the full feature breakdown including scan modes and output options.</p>
+            <p>
+                Network security tool built in Python that scans open ports across hosts. Includes multiple scan modes and structured output for analysis and diagnostics.
+            </p>
         </a>
 
         <a class="project-card fade-in" data-category="java" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.16s">
@@ -560,7 +578,9 @@
         <a class="project-card fade-in" data-category="asp" href="https://github.com/annikaduggal/Fantasy-Fitness" target="_blank" style="transition-delay:0.24s">
             <div class="project-icon">🏋️</div>
             <h3>Fantasy Fitness Tracker</h3>
-            <p>Collaborative gamified competitive fitness tracker built with ASP.NET. Includes RBAC and a PostgreSQL database.</p>
+            <p>
+                Gamified fitness tracking platform with competitive elements and role-based access control. Designed to simulate real-world SaaS product architecture using ASP.NET Core and PostgreSQL.
+            </p>
         </a>
 
         <a class="project-card fade-in" data-category="java" href="https://github.com/annikaduggal/TicTacToe-Player/tree/main" target="_blank" style="transition-delay:0.32s">
